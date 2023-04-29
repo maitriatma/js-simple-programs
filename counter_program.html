@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+</head>
+<body>
+    <label id="countlabel" style="color: rgb(255, 1, 1);
+    text-align: center; font-size: 200px;">0</label><br>
+
+    <button id="dbutton">Decrease</button>
+    <button id="rbutton">Rest</button>
+    <button>Increase</button>
+    
+    <script>
+        let count =0;
+
+        document.getElementById("dbutton").onclick=function(){
+            count -= 1;
+            document.getElementById("countlabel").innerHTML= count;
+        }
+        document.getElementById("rbutton").onclick=function(){
+            count=0;
+            document.getElementById("countlabel").innerHTML= count;
+        }
+        document.getElementById("ibutton").onclick=function(){
+            count +=1;
+            document.getElementById("countlabel").innerHTML= count;
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
