@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+button {
+font-size: 200%;
+width: 40px;
+}
+input {
+font-size: 14px;
+height: 40px;
+text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+<table>
+<tr>
+  <td colspan="4"><input id="display" name="display" disabled></input></td>
+</tr>
+
+<tr>
+  <td><button id="button1" value="1">1</button></td>
+  <td><button id="button2" value="2">2</button></td>
+  <td><button id="button3" value="3">3</button></td>
+  <td><button id="addButton" value="+">+</button></td>
+</tr>
+<tr>
+  <td><button id="button4" value="4">4</button></td>
+  <td><button id="button5" value="5">5</button></td>
+  <td><button id="button6" value="6">6</button></td>
+  <td><button id="subtractButton" value="-">-</button></td>
+</tr>
+<tr>
+  <td><button id="button7" value=7>7</button></td>
+  <td><button id="button8" value=8>8</button></td>
+  <td><button id="button9" value=9>9</button></td>
+  <td><button id="multiplyButton" value="*">*</button></td>
+</tr>
+<tr>
+  <td><button id="clearButton" value="C">C</button></td>
+  <td><button id="button0" value="0">0</button></td>
+  <td><button id="equalsButton" value="=">=</button></td>
+  <td><button id="divideButton" value="/">/</button></td>
+</tr>
+
+</table>
+
+
+<span id='output'><!-- Use this span for writing debug messages or anything else you think will help! --></span>
+
+
+<script>
+    
+
+const display = document.getElementById('display');
+
+
+
+function appendValue(value) {
+    display.value += value;
+}
+
+
+
+function clearDisplay() {
+    display.value = '';
+}
+
+
+
+function calculateResult() {
+    try {
+        const result = eval(display.value);
+        display.value = result;
+    } catch (error) {
+        display.value = 'Invalid expression';
+    }
+}
+
+
+
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        const buttonValue = button.value;
+        if (buttonValue === 'C') {
+            clearDisplay();
+        } else if (buttonValue === '=') {
+            calculateResult();
+        } else {
+            appendValue(buttonValue);
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
