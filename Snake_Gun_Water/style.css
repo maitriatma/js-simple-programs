@@ -1,0 +1,46 @@
+body{
+    background: url("https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?w=360");
+    color: aliceblue;
+    font-family: 'GFS Didot', serif;
+}
+.container{
+    background: #000;
+    color: aliceblue;
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border : 10px solid royalblue;
+    border-radius: 10px ;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+.btn{
+    background-color: black;
+    width: 12%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: yellow;
+    border: 2px solid whitesmoke
+}
+.btn:hover{
+    background-color: rgb(172, 127, 255);
+    transform: translateY(-3px);
+    font-size: 20px;
+    font-weight: 500;
+    color: brown;
+}
+.heading{
+    position: relative;
+    animation: myanimation,5s,infinite;
+}
+@keyframes myanimation{
+from{left: 0px;}
+to{right: 10px;}
+}

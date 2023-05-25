@@ -1,0 +1,20 @@
+.clock{
+     background: blue;
+     width: 50%;
+     border-radius: 25px;
+     height: 20vh;
+}
+*{
+    background-color: black;
+     color: aliceblue;
+}
+button{
+    cursor : pointer;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
