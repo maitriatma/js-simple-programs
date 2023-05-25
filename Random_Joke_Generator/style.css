@@ -1,0 +1,35 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:url(https://cdn.pixabay.com/photo/2023/04/13/02/20/waterfall-7921517_960_720.jpg),no-repeat;
+    background-size: cover;
+}
+.container{
+    background-color: aqua;
+    padding: 2%;
+    font-family: 'Ubuntu Mono', monospace;
+    width: 40%,max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.btn{
+    background-color: yellow;
+    border-radius: 15px;
+    width: 10%,max-content;
+    height: 25px;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: translateY(-1px);
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
